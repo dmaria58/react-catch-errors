@@ -1,5 +1,5 @@
 
-# react-transform-catch-errors
+# react-catch-errors
 
 A [React Transform](https://github.com/gaearon/babel-plugin-react-transform) that catches errors inside `render()` function and renders a React component with an error message instead.
 

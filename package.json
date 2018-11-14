@@ -24,5 +24,9 @@
     "react",
     "error catch",
     "try catch"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/dmaria58/react-catch-errors/issues"
+  },
+  "homepage": "https://github.com/dmaria58/react-catch-errors#readme"
 }

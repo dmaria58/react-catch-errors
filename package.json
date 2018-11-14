@@ -1,0 +1,28 @@
+{
+  "name": "react-catch-errors",
+  "version": "1.0.0",
+  "description": "React error catch",
+  "main": "index.js",
+  "directories": {
+    "React error catch": "React error catch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "scripts": {
+    "dist": "babel catch.js --out-file index.js"
+  },
+  "author": "Maria",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmaria58/react-catch-errors.git"
+  },
+  "keywords": [
+    "react",
+    "error catch",
+    "try catch"
+  ]
+}

@@ -11,6 +11,7 @@ export default function catchErrors({ filename, components, imports }) {
     const h_render = ReactClass.prototype.render;
     Object.defineProperty(ReactClass.prototype, 'render', {
       configurable: true,
+      writable:true,
       value: function tryRender() {
         try {
           return h_render.apply(this, arguments);
@@ -24,6 +25,7 @@ export default function catchErrors({ filename, components, imports }) {
     const h_componentWillUpdate = ReactClass.prototype.componentWillUpdate;
     Object.defineProperty(ReactClass.prototype, 'componentWillUpdate', {
       configurable: true,
+      writable:true,
       value: function tryRender() {
         try{
           if(!h_componentWillUpdate) return
@@ -37,6 +39,7 @@ export default function catchErrors({ filename, components, imports }) {
     var h_componentWillReceiveProps =ReactClass.prototype.componentWillReceiveProps;
     Object.defineProperty(ReactClass.prototype, 'componentWillReceiveProps', {
       configurable: true,
+      writable:true,
       value: function tryRender() {
         try{
           if(!h_componentWillReceiveProps) return
@@ -50,6 +53,7 @@ export default function catchErrors({ filename, components, imports }) {
     var h_componentDidUpdate =ReactClass.prototype.componentDidUpdate;
     Object.defineProperty(ReactClass.prototype, 'componentDidUpdate', {
       configurable: true,
+      writable:true,
       value: function tryRender() {
         try{
           if(!h_componentDidUpdate) return
@@ -63,6 +67,7 @@ export default function catchErrors({ filename, components, imports }) {
     var h_componentWillUnmount =ReactClass.prototype.componentWillUnmount;
     Object.defineProperty(ReactClass.prototype, 'componentWillUnmount', {
       configurable: true,
+      writable:true,
       value: function tryRender() {
         try{
           if(!h_componentWillUnmount) return
@@ -76,6 +81,7 @@ export default function catchErrors({ filename, components, imports }) {
     var h_componentWillMount =ReactClass.prototype.componentWillMount;
     Object.defineProperty(ReactClass.prototype, 'componentWillMount', {
       configurable: true,
+      writable:true,
       value: function tryRender() {
         try{
           if(!h_componentWillMount) return
@@ -89,6 +95,7 @@ export default function catchErrors({ filename, components, imports }) {
     var h_componentDidMount =ReactClass.prototype.componentDidMount;
     Object.defineProperty(ReactClass.prototype, 'componentDidMount', {
       configurable: true,
+      writable:true,
       value: function tryRender() {
         try{
           if(!h_componentDidMount) return

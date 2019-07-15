@@ -20,6 +20,25 @@ function catchErrors(_ref) {
   }
 
   return function returnCatchErrors(ReactClass) {
+    //setState
+    var hf_render = ReactClass.prototype.setState;
+    Object.defineProperty(ReactClass.prototype, 'setState', {
+      configurable: true,
+      writable: true,
+      value: function tryRender() {
+        if (arguments[1]) {
+          var funcs = arguments[1];
+          arguments[1] = function () {
+            try {
+              return funcs.apply(this, arguments);
+            } catch (err) {
+              console.error(err);
+            }
+          };
+        }
+        return hf_render.apply(this, arguments);
+      }
+    });
     //render
     if (ReactClass.prototype.render) {
       var h_render = ReactClass.prototype.render;
